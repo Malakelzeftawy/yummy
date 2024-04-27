@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Yummy</title>
+</head>
+<body>
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+
+    <div class="side-bar bg-black vh-100 top-0 position-fixed d-flex ">
+        <div class="content p-4 d-flex flex-column justify-content-between">
+            <div class="links text-white ">
+                <ul class="list-unstyled overflow-hidden d-flex flex-column gap-3 fs-5">
+                    <li onclick="closeSideBar()" class="search position-relative">Search</li>
+                    <li onclick="getCategories(); closeSideBar() " class="position-relative category">Categories</li>
+                    <li onclick="getArea(); closeSideBar()" class="area position-relative">Area</li>
+                    <li onclick="getIngradients(); closeSideBar()" class="ingradients position-relative">Ingradients</li>
+                    <li onclick="showContact(); closeSideBar()" class="contact position-relative">Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="icons text-white d-flex gap-2">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <p class="text-white fs-6 mt-3">Copyright Â© 2019 All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="header text-black bg-white d-flex flex-column justify-content-between py-4 align-items-center">
+            <img src="assets/imgs/logo.png" alt="" class="w-75">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="min-vh-100 w-100 bg-black">
+        <div class="container p-4">
+            <div class="row g-4" id="rowData">
+            </div>
+        </div>
+    </section>
+    <section id="search" class="bg-black w-100 min-vh-100 d-none">
+        <div class="container py-5">
+            <div class=" row g-4 row-search">
+                <div class="col-md-6 ">
+                    <input onkeyup="searchByName(this.value)" type="text" name="name" id="name" placeholder="Search by name" class="form-control bg-black text-white">
+                </div>
+                <div class="col-md-6">
+                    <input onkeyup="searchByLetter(this.value)" type="text" name="letter" id="letter" placeholder="Search by letter" class="form-control bg-black text-white">
+                </div>
+            </div>
+        </div>
+        <div class="container p-4">
+            <div class="row row-result g-4" id="rowData">
+            </div>
+        </div>
+    </section>
+    <section id="category" class="bg-black w-100 min-vh-100 d-none">
+        <div class="container p-4">
+            <div class="row g-4" id="rowData">
+            </div>
+         </div>
+      
+    </section>
+    <section id="area" class="bg-black w-100 min-vh-100 d-none">
+        <div class="container p-5">
+            <div class="row g-4" id="rowData">
+            </div>
+        </div>
+    </section>
+    <section id="ingradients" class="bg-black w-100 min-vh-100 d-none">
+        <div class="container p-4">
+            <div class="row g-4" id="rowData">
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-black vh-100 w-100 d-none ">
+        <div class="container p-5 h-100">
+            <form class="h-100 d-flex justify-content-center align-items-center">
+                <div class="row d-flex justify-content-center align-items-center g-4 ">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
